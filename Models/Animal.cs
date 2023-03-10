@@ -1,55 +1,33 @@
-﻿using System;
+﻿using System.Globalization;
 
-public abstract class Animal
+namespace CSharpAnimal.Models.Animals
 {
-    public string Name { get; private set; }
-
-    public Animal()
+    abstract public class Animal
     {
-        Name = "Lukas";
-    }
+        public Animal()
+        {
+            this.name = "Cat";
+            this.Type = "commun";
+            this.Id = 1;
+        }
+        public Animal(string name, string type, int id)
+        {
+            this.name = name;
+            this.Type = type;
+            this.Id = id;
 
-    public Animal(string name)
-    {
-        Name = name;
-    }
+        }
+        public string name { get; set; }
+        public string Type { get; set; }
+        public int Id { get; set; }
+        public virtual void Moove()
+        {
+            Console.WriteLine("Moove !");
+        }
+        public virtual void Sleep()
+        {
+            Console.WriteLine("Sleep !");
+        }
 
-    public abstract void Move();
-
-    public void Sleep()
-    {
-        Console.WriteLine($"{Name} est endormi.");
-    }
-}
-
-public class Dragon : Animal
-{
-    public Dragon() : base()
-    {
-    }
-
-    public Dragon(string name) : base(name)
-    {
-    }
-
-    public override void Move()
-    {
-        Console.WriteLine($"{Name} vole dans les airs.");
-    }
-}
-
-public class Griffin : Animal
-{
-    public Griffin() : base()
-    {
-    }
-
-    public Griffin(string name) : base(name)
-    {
-    }
-
-    public override void Move()
-    {
-        Console.WriteLine($"{Name} s'envole .");
     }
 }
