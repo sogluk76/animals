@@ -1,20 +1,19 @@
 ﻿using CSharpAnimal.Models.Animals;
-
 namespace CSharpAnimal.Models.Animals
 {
-    class Griffin : Animal, IPilotage, IFly
+    class Eagle : Animal, IPilotage, IFly
     {
-        public Griffin()
+        public Eagle()
         {
-            name = "Griffin";
+            name = "Dragon";
         }
-        public Griffin(string name, string type, int ID)
+
+        public Eagle(string name, string type, int ID)
         {
             this.name = name;
             this.Type = type;
             this.Id = ID;
         }
-
         public override void Moove()
         {
             Console.WriteLine($"{name} moove");

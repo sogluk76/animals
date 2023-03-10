@@ -28,6 +28,10 @@ namespace CSharpAnimal.Models.Animals
         {
             Console.WriteLine("Sleep !");
         }
+        public virtual void Fly()
+        {
+            Console.WriteLine("fly!");
+        }
 
     }
 }

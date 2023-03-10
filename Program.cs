@@ -7,10 +7,15 @@ class Program
         Animal animal = new Dragon();
         animal.Sleep();
         animal.Moove();
+        animal.Fly();
 
         Animal animal2 = new Griffin();
         animal2.Sleep();
         animal2.Moove();
+        animal2.Fly();
+
+        Animal animal3 = new Bird();    
+        animal3.Fly();
 
 
 
@@ -20,8 +25,9 @@ class Program
         Dragon ptera = new Dragon("Ptera", "Commun", 1);
         Dog wolf = new Dog("Wolf", "Commun", 2);
         Dog ben = new Dog("Ben", "Commun", 20);
+        Bird Bird = new Bird("Bird", "Commun", 4);
 
-        Animal[] liste = { dog, enderDragon, griffin, ptera, wolf, ben };
+        Animal[] liste = { dog, enderDragon, griffin, ptera, wolf, ben, Bird };
         //var result = liste.Where(c => !c.Type.Contains("Rare"));
 
         //foreach (Animal animaux in result)

@@ -1,7 +1,7 @@
 ﻿using CSharpAnimal.Models.Animals;
 namespace CSharpAnimal.Models.Animals
 {
-    class Dragon : Animal, IPilotage
+    class Dragon : Animal, IPilotage, IFly
     {
         public Dragon()
         {
@@ -17,6 +17,11 @@ namespace CSharpAnimal.Models.Animals
         public override void Moove()
         {
             Console.WriteLine($"{name} moove");
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine($"{name} fly");
         }
 
         public new void Sleep()
